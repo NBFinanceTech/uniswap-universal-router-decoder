@@ -75,8 +75,8 @@ class RouterCodec:
             nonce: int,
             spender: ChecksumAddress,
             deadline: int,
-            chain_id: int，
-            verifyingContract: str) -> Tuple[Dict[str, Any], SignableMessage]:
+            chain_id: int = 1,
+            verifyingContract: str = "0x000000000022D473030F116dDEE9F6B43aC78BA3") -> Tuple[Dict[str, Any], SignableMessage]:
         """
         Create a eth_account.messages.SignableMessage that will be sent to the UR/Permit2 contracts
         to set token permissions through signature validation.
